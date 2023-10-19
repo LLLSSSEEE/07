@@ -1,26 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int inc(int counter); 
+void f(void);
+int i;
+
 int main(int argc, char *argv[])
 {
-    //int main(void)
-    //{
-      int i = 10;
-      printf("함수 호출전 i = %d\n", i);
-      i = inc(i); //그냥 inc(i); 였으면 의도대로 안된다.  
-      printf("함수 호출후 i = %d\n", i);
-      
-      system("PAUSE"); 
-      return 0;
-}
+    for (i=0; i<5; i++)
+    {
+        f();
+    }
     
-int inc(int counter)
+    system("PAUSE");
+    return 0;
+}
+
+void f(void)
 {
-        counter++; // 얘를 효과적으로 하고싶으면 i=inc(i); 로 바꿔줘야 한다.  
-        return counter; // 계산한걸 밖으로 꺼낼 때 사용. 
-} 
-        
+     for (i=0; i<10; i++)
+        printf("#");
+
+    
+//    system("PAUSE"); // 얘 안쓰면 검정색창 금방 사라짐 
+//    return 0;
+}
+
+
              
   
   //system("PAUSE");	
